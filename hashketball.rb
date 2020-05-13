@@ -249,3 +249,6 @@ end
 
 winning_team 
 
+def player_with_longest_name
+  1 
+end 
