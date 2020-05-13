@@ -183,9 +183,8 @@ def player_stats (pname)
   game_hash.each do |hoaw,specs|
     specs[:players].each_with_index do |val, index| 
       if val[:player_name] == pname  
-        val.delete(:player_name) 
-        puts val 
-        return val 
+        puts val.sort 
+        return val.sort 
       end 
     end 
   end 
