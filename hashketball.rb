@@ -206,6 +206,7 @@ def big_shoe_rebounds
     end 
   end
   puts bigfoot 
+  puts bigbound 
   return bigbound
 end 
 
