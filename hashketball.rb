@@ -130,7 +130,8 @@ def num_points_scored(player)
   game_hash.each do |hoaw,specs|
     specs[:players].each_with_index do |val, index| 
       if val[:player_name] = player 
-        return val[:points] 
+        puts val[:points] 
+        return val[:points]
       end 
     end 
   end 
