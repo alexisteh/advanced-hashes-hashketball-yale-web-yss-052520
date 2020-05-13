@@ -139,4 +139,16 @@ end
 
 num_points_scored("Kemba Walker") 
 
+def shoe_size (playr)
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:player_name] == playr 
+        puts val[:shoe] 
+        return val[:shoe]
+      end 
+    end 
+  end 
+end 
+
+
 
