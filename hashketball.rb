@@ -195,15 +195,18 @@ player_stats("Alan Anderson")
 def big_shoe_rebounds 
   bigfoot = "Allan Anderson"
   bigsize = game_hash[:home][:players][0][:shoe] 
+  bigbound = game_hash[:home][:players][0][:rebounds] 
   game_hash.each do |hoaw,specs|
     specs[:players].each_with_index do |val, index| 
       if val[:shoe] > bigsize  
         bigsize = val[:shoe] 
         bigfoot = val[:player_name]
+        bigbound = val[:rebounds]
       end 
     end 
   end
   puts bigfoot 
+  return bigbound
 end 
 
 
