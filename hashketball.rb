@@ -267,3 +267,10 @@ def player_with_longest_name
 end 
 
 player_with_longest_name
+
+def long_name_steals_a_ton? 
+  longman = player_with_longest_name 
+  
+end 
+
+long_name_steals_a_ton
