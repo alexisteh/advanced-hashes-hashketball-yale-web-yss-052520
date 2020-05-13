@@ -183,8 +183,8 @@ def player_stats (pname)
   game_hash.each do |hoaw,specs|
     specs[:players].each_with_index do |val, index| 
       if val[:player_name] == pname  
-        k = val.shift
-        return k 
+        k = val
+        return k.shift 
       end 
     end 
   end 
