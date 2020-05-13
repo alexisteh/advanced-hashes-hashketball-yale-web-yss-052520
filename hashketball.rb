@@ -167,6 +167,25 @@ def team_names
   return arr 
 end 
 
+def player_numbers (team)
+  arr = []
+  game_hash.each do |hoaw,specs| 
+    if specs[:team_name] == team 
+      specs[:players].each do |playr| 
+        arr << playr[:number] 
+      end 
+    end 
+  end 
+  return arr 
+end 
+
+
+
+
+
+
+
+
 
 
 
