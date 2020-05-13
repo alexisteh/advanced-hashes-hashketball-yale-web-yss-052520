@@ -184,7 +184,7 @@ def player_stats (pname)
     specs[:players].each_with_index do |val, index| 
       if val[:player_name] == pname  
         val.delete(pname) 
-        return k.shift 
+        return val 
       end 
     end 
   end 
