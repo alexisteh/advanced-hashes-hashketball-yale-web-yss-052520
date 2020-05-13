@@ -126,4 +126,167 @@ def game_hash
   }
 end
 
-# Write code here
+def num_points_scored(playr) 
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:player_name] == playr 
+        puts val[:points] 
+        return val[:points]
+      end 
+    end 
+  end 
+end 
+
+num_points_scored("Kemba Walker") 
+
+def shoe_size (playr)
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:player_name] == playr 
+        puts val[:shoe] 
+        return val[:shoe]
+      end 
+    end 
+  end 
+end 
+
+def team_colors (team) 
+  game_hash.each do |hoaw,specs| 
+    if specs[:team_name] == team 
+      return specs[:colors]
+    end 
+  end 
+end 
+
+def team_names 
+  arr = [] 
+  game_hash.each do |hoaw,specs| 
+    arr << specs[:team_name] 
+  end 
+  puts arr 
+  return arr 
+end 
+
+def player_numbers (team)
+  arr = []
+  game_hash.each do |hoaw,specs| 
+    if specs[:team_name] == team 
+      specs[:players].each do |playr| 
+        arr << playr[:number] 
+      end 
+    end 
+  end 
+  return arr 
+end 
+
+def player_stats (pname) 
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:player_name] == pname  
+        puts val
+        return val
+      end 
+    end 
+  end 
+end 
+
+player_stats("Alan Anderson") 
+
+def big_shoe_rebounds 
+  bigfoot = "Allan Anderson"
+  bigsize = game_hash[:home][:players][0][:shoe] 
+  bigbound = game_hash[:home][:players][0][:rebounds] 
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:shoe] > bigsize  
+        bigsize = val[:shoe] 
+        bigfoot = val[:player_name]
+        bigbound = val[:rebounds]
+      end 
+    end 
+  end
+  puts bigfoot 
+  puts bigbound 
+  return bigbound
+end 
+
+big_shoe_rebounds
+
+def most_points_scored 
+  splayer = "Allan Anderson"
+  spoints = game_hash[:home][:players][0][:points] 
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:points] > spoints  
+        spoints = val[:points] 
+        splayer = val[:player_name]
+      end 
+    end 
+  end
+  puts splayer  
+  return splayer 
+end 
+
+most_points_scored
+
+def winning_team
+  p = 0 
+  teamn = "" 
+  game_hash.each do |hoaw, specs| 
+    pteam = 0 
+    specs[:players].each do |playr| 
+      pteam += playr[:points] 
+    end 
+    if pteam > p 
+      p = pteam 
+      teamn = specs[:team_name]
+    end 
+  end 
+  puts teamn 
+  puts p 
+  return teamn 
+end 
+
+winning_team 
+
+def player_with_longest_name
+  playermax = "Allan Anderson" 
+  lenmax = 0 
+  game_hash.each do |hoaw, specs| 
+    specs[:players].each do |playr| 
+      len = playr[:player_name].length 
+      if len > lenmax 
+        lenmax = len 
+        playermax = playr[:player_name] 
+      end 
+    end 
+  end 
+  puts playermax
+  puts lenmax 
+  return playermax 
+end 
+
+player_with_longest_name
+
+def long_name_steals_a_ton? 
+  longman = player_with_longest_name 
+  stealman = "Allan Anderson" 
+  stealmax = 0 
+  game_hash.each do |hoaw, specs| 
+    specs[:players].each do |playr| 
+      if playr[:steals] > stealmax 
+        stealmax = playr[:steals] 
+        stealman = playr[:player_name] 
+      end 
+    end 
+  end 
+  puts stealman 
+  puts stealmax 
+  if stealman == longman
+    puts "true"
+    return true 
+  end 
+  return "I guess stealman isn't longman."
+end 
+
+long_name_steals_a_ton? 
