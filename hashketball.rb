@@ -179,7 +179,16 @@ def player_numbers (team)
   return arr 
 end 
 
-
+def player_states (pname) 
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:player_name] == pname  
+        puts val 
+        return val
+      end 
+    end 
+  end 
+end 
 
 
 
