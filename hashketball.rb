@@ -190,7 +190,7 @@ def player_states (pname)
   end 
 end 
 
-
+player_stats("Alan Anderson") 
 
 
 
