@@ -163,7 +163,6 @@ def team_names
     specs[team_name]
   end 
   arr 
-    
 end 
 
 
