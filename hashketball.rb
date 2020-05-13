@@ -270,7 +270,17 @@ player_with_longest_name
 
 def long_name_steals_a_ton? 
   longman = player_with_longest_name 
-  
+  stealman = "Allan Anderson" 
+  stealmax = 0 
+  game_hash.each do |hoaw, specs| 
+    specs[:players].each do |playr| 
+      stl = playr[:player_name].length 
+      if len > lenmax 
+        lenmax = len 
+        playermax = playr[:player_name] 
+      end 
+    end 
+  end 
 end 
 
 long_name_steals_a_ton
