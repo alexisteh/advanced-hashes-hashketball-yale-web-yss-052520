@@ -274,13 +274,15 @@ def long_name_steals_a_ton?
   stealmax = 0 
   game_hash.each do |hoaw, specs| 
     specs[:players].each do |playr| 
-      stl = playr[:player_name].length 
-      if len > lenmax 
-        lenmax = len 
-        playermax = playr[:player_name] 
+      if playr[:steals] > stealmax 
+        lenmax = playr[:steals] 
+        stealman = playr[:player_name] 
       end 
     end 
   end 
+  puts stealman 
+  puts stealmax 
+  return stealman == longman 
 end 
 
 long_name_steals_a_ton
