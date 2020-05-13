@@ -210,8 +210,22 @@ def big_shoe_rebounds
   return bigbound
 end 
 
-
 big_shoe_rebounds
+
+def most_points_scored 
+  splayer = "Allan Anderson"
+  spoints = game_hash[:home][:players][0][:points] 
+  game_hash.each do |hoaw,specs|
+    specs[:players].each_with_index do |val, index| 
+      if val[:points] > spoints  
+        spoints = val[:points] 
+        splayers = val[:player_name]
+      end 
+    end 
+  end
+  puts splayer  
+  return splayer 
+end 
 
 
 
