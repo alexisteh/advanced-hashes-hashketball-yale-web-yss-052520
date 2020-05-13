@@ -150,5 +150,11 @@ def shoe_size (playr)
   end 
 end 
 
-
+def team_colors (team) 
+  game_hash.each do |hoaw,specs| 
+    if specs[:team_name] == team 
+      return specs[:team_colors]
+    end 
+  end 
+end 
 
