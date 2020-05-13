@@ -229,7 +229,23 @@ end
 
 most_points_scored
 
-
+def winning_team
+  p = 0 
+  teamn = "" 
+  game_hash.each do |hoaw, specs| 
+    pteam = 0 
+    specs[:players].each do |playr| 
+      pteam += playr[:points] 
+    end 
+    if pteam > p 
+      p = pteam 
+      teamn = specs[:team_name]
+    end 
+  end 
+  puts teamn 
+  puts p 
+  return teamn 
+end 
 
 
 
