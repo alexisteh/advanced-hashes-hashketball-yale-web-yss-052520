@@ -250,5 +250,20 @@ end
 winning_team 
 
 def player_with_longest_name
-  1 
+  playermax = "Allan Anderson" 
+  lenmax = 0 
+  game_hash.each do |hoaw, specs| 
+    specs[:players].each do |playr| 
+      len = playr.length 
+      if len > lenmax 
+        lenmax = len 
+        playermax = playr 
+      end 
+    end 
+  end 
+  puts playermax
+  puts lenmax 
+  return playermax 
 end 
+
+player_with_longest_name
