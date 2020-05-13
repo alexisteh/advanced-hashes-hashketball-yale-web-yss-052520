@@ -254,10 +254,10 @@ def player_with_longest_name
   lenmax = 0 
   game_hash.each do |hoaw, specs| 
     specs[:players].each do |playr| 
-      len = playr.length 
+      len = playr[:player_name].length 
       if len > lenmax 
         lenmax = len 
-        playermax = playr 
+        playermax = playr[:player_name] 
       end 
     end 
   end 
