@@ -159,10 +159,12 @@ def team_colors (team)
 end 
 
 def team_names 
-  arr = game_hash.collect do |hoaw,specs| 
-    specs[team_name]
+  arr = [] 
+  game_hash.each do |hoaw,specs| 
+    arr << specs[team_name] 
   end 
   puts arr 
+  return arr 
 end 
 
 
