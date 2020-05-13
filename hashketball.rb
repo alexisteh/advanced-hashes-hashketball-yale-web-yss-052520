@@ -198,7 +198,7 @@ def big_shoe_rebounds
   game_hash.each do |hoaw,specs|
     specs[:players].each_with_index do |val, index| 
       if val[:shoe] > bigsize  
-        big size = val[:shoe] 
+        bigsize = val[:shoe] 
         bigfoot = val[:player_name]
       end 
     end 
