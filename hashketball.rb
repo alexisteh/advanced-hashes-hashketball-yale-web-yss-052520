@@ -282,7 +282,7 @@ def long_name_steals_a_ton?
   end 
   puts stealman 
   puts stealmax 
-  return (stealman == longman) 
+  return true if stealman == longman
 end 
 
 long_name_steals_a_ton? 
