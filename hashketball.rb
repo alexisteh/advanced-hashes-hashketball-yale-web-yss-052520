@@ -158,3 +158,15 @@ def team_colors (team)
   end 
 end 
 
+def team_names 
+  arr = game_hash.collect do |hoaw,specs| 
+    specs[team_name]
+  end 
+  
+    
+end 
+
+
+
+
+
