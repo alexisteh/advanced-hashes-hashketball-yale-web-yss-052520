@@ -219,7 +219,7 @@ def most_points_scored
     specs[:players].each_with_index do |val, index| 
       if val[:points] > spoints  
         spoints = val[:points] 
-        splayers = val[:player_name]
+        splayer = val[:player_name]
       end 
     end 
   end
